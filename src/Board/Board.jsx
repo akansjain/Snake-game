@@ -89,8 +89,7 @@ const Board = () => {
 
     const nextHeadCoords = getCoordsInDirection(currentHeadCoords, direction);
     if (isOutOfBounds(nextHeadCoords, board)) {
-      setTimeout(handleGameOver, 2000);
-      // handleGameOver();
+      handleGameOver();
       return;
     }
     const nextHeadCell = board[nextHeadCoords.row][nextHeadCoords.col];
